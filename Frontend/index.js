@@ -4,18 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generate-button');
   
     generateButton.addEventListener('click', async () => {
-      const keyword = document.getElementById('keyword').value;
+      const keyword = document.getElementById('keyword').value || "any topic";
   
       try {
-
-        const response = await fetch( `http://localhost:4000/?c=music`);
+        document.getElementById("loader").style.visibility="visible"
+        const response = await fetch( `https://azure-deer-kit.cyclic.app/shayari?c=${keyword}`);
         if (response.ok) {
+           
+         
           const data = await response.json();
-          console.log(data.choices);
-          shayariResult.innerHTML = `<p>${data.choices[0].text.trim()}</p>`;
+          console.log(data.content)
+          
+          shayariResult.innerHTML = `<p>${data.content}</p>`;
         } else {
           shayariResult.innerHTML = '<p>Failed to generate Shayari</p>';
         }
+        document.getElementById("loader").style.visibility="hidden"
       } catch (error) {
         console.error(error);
         shayariResult.innerHTML = '<p>Error occurred</p>';

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shayari Generator</title>
   <!-- Font Awesome -->
 <link
@@ -20,11 +22,12 @@ rel="stylesheet"
 <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+    <span id="loader" class="loader"></span>
   <h1>Generate Shayari</h1>
   <form id="shayari-form">
     <label for="keyword">Enter a Keyword:</label>
     <input type="text" id="keyword" name="keyword" required>
-    <button type="button" id="generate-button">Generate</button>
+    <button  type="button" id="generate-button">Generate</button>
   </form>
   <div id="shayari-result"></div>
   <script src="script.js"></script>
