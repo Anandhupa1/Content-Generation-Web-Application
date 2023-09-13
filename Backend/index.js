@@ -24,7 +24,7 @@ app.get("/shayari",async(req,res)=>{
       });
       
       console.log(completion.choices);
-      res.send(completion.choices[0].message.content)
+      res.send(completion.choices[0].message)
 
       } catch (error) {
         console.error('Error:', error.response.data);
