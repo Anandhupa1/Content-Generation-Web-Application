@@ -4,10 +4,7 @@ body{
    align-items: center;
    justify-content: center;
    padding:10px 20%;
-   background-image: url("https://e0.pxfuel.com/wallpapers/641/908/desktop-wallpaper-cool-orange-and-white-background-orange-white-by-laura-patricia-for-your-mobile-tablet-explore-orange-and-white-orange-and-black-orange.jpg");
-   background-repeat: no-repeat; 
-   background-size: cover; 
-   margin: 0;
+   background-color: bisque;
 }  
 #generate-button{
     background-color: #FF3D00;
