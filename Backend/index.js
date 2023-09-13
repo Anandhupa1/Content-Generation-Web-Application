@@ -27,7 +27,7 @@ app.get("/shayari",async(req,res)=>{
       res.send(completion.choices[0].message)
 
       } catch (error) {
-        console.error('Error:', error.response.data);
+        console.error('Error:', error);
         res.status(500).json({ error: 'Something went wrong' });
       }
 })
